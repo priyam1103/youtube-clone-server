@@ -95,6 +95,6 @@ app.get("/likedislike/:id", async (req, res) => {
 
   res.status(200).json({ dislikes: video.dislike, likes: video.liked });
 });
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("listening to the port: " + port);
 });
